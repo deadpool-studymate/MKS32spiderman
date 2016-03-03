@@ -5,6 +5,7 @@ var app = angular.module('app', [
   'brew.cafelist',
   'ngRoute',
   'ngAnimate',
+  'ui.bootstrap',
   'ui.bootstrap.datetimepicker'
 ]);
 
