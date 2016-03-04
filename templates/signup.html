@@ -4,14 +4,14 @@
 
     <h1 class="text-center login-logo">Brew4Two</h1>
     <h2 class="text-center ">Signup</h2>
-    <form>
+    <form name="myForm" ng-submit="signup()">
       <div class="form-group col-md-6">
         <label>Username</label>
-        <input type="text" class="form-control" ng-model="newUser.username">
+        <input type="text" class="form-control" ng-model="newUser.username" required>
       </div>
       <div class="form-group col-md-6">
         <label >Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="newUser.password">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="newUser.password"required>
       </div>
       <div class="form-group col-md-6">
         <label>First Name</label>
@@ -154,7 +154,7 @@
         <input type="text" class="form-control" placeholder="photo url" ng-model="newUser.profilePicture">
       </div>
 
-        <button type="submit" ng-click="signup()" class="btn btn-md btn-block login-buttons">Submit</button>
+        <button type="submit" class="btn btn-md btn-block login-buttons" ng-disabled="myForm.$invalid">Submit</button>
 
     </form>
   </div>
@@ -163,7 +163,7 @@
 
 <style>
 .bgimg{
-  background-image: url('http://media4.popsugar-assets.com/files/2013/12/19/815/n/1922283/6a73ebd3380b3639_AWOD_0-2/i/quaintest-coffee-date-weve-ever-seen.jpg');
+  background-image: url('../app/assets/coffee-date.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
